@@ -1,0 +1,94 @@
+/* ----------------------------------------------- */
+/* 
+/* Styling for the entire app */
+/* 
+/* ----------------------------------------------- */
+
+/* Bootstrap and Fonts */
+/* ----------------------------------------------- */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap'); */
+
+/* Components */
+/* ----------------------------------------------- */
+@import '../components/components.scss';
+
+html,
+body,
+#root {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #14286c;
+	height: 100%;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#root,
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+	margin: 0 auto;
+}
+
+/* Text Colors */
+/* ----------------------------------------------- */
+.whiteText {
+	color: #f0edff;
+}
+
+.redText {
+	color: red;
+}
+
+/* Text Sizes */
+/* ----------------------------------------------- */
+.text15 {
+	font-size: 1.5rem;
+}
+
+.text29 {
+	font-size: 2.9rem;
+}
+
+/* Text Fonts */
+/* ----------------------------------------------- */
+.robotoText {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.antonText {
+	font-family: 'Anton', sans-serif;
+}
+
+/* Buttons */
+/* ----------------------------------------------- */
+/* .buttonContainer {
+	margin-top: 50px;
+}
+
+button {
+	width: 70%;
+	height: 58px;
+} */
+
+/* .btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:focus,
+.btn-primary {
+	background-color: #7f7baf;
+	border-color: #7f7baf;
+	box-shadow: 0 0 0 0.2rem #7f7baf;
+}
+
+.btn-primary:hover {
+	background-color: #47418e;
+	border-color: #47418e;
+	box-shadow: 0 0 0 0.2rem #47418e;
+} */

@@ -1,0 +1,16 @@
+/* ----------------------------------------------- */
+/* 
+/* ResumeHeader Styling */
+/* 
+/* ----------------------------------------------- */
+
+.resumeHeaderContainer {
+	.nameContainer,
+	.contactContainer {
+		display: flex;
+	}
+
+	.contactContainer {
+		justify-content: space-between;
+	}
+}

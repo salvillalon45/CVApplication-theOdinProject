@@ -1,0 +1,13 @@
+/* ----------------------------------------------- */
+/* 
+/* ResumeRow Styling */
+/* 
+/* ----------------------------------------------- */
+
+.resumeRowContainer {
+	.row1InfoContainer,
+	.nameLocationContainer,
+	.timeFrameContainer {
+		display: flex;
+	}
+}
