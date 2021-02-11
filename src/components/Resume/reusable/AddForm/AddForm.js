@@ -10,20 +10,24 @@
 // Imports
 
 // React
-import { React, useState } from 'react';
+import { React } from 'react';
 
 // Bootstrap
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 
 // Reusable
-// import ResumeRow from '../reusable/ResumeRow';
 import ActionButton from '../ActionButton';
 // -----------------------------------------------
 
 function AddForm(props) {
-	const { formLabels } = props;
+	const { formLabels, editData } = props;
+	let value1;
+	let value2;
+	let value3;
+	let value4;
+	let value5;
+	let value6;
 
 	let formName1 = formLabels.get(1)[0];
 	let placeholder1 = formLabels.get(1)[1];
@@ -38,6 +42,17 @@ function AddForm(props) {
 	let formName6 = formLabels.get(6)[0];
 	let placeholder6 = formLabels.get(6)[1];
 
+	if (editData !== '') {
+		value1 = editData[formName1];
+		value2 = editData[formName2];
+		value3 = editData[formName3];
+		value4 = editData[formName4];
+		value5 = editData[formName5];
+		value6 = editData[formName6];
+	}
+
+	console.log(editData);
+
 	return (
 		<Form onSubmit={(event) => props.handleSubmit(event)}>
 			<Form.Group controlId='formName1'>
@@ -45,6 +60,7 @@ function AddForm(props) {
 				<Form.Control
 					type='text'
 					name={formName1}
+					value={value1}
 					placeholder={placeholder1}
 					onChange={props.handleChange}
 				/>
@@ -55,6 +71,7 @@ function AddForm(props) {
 				<Form.Control
 					type='text'
 					name={formName2}
+					value={value2}
 					placeholder={placeholder2}
 					onChange={props.handleChange}
 				/>
@@ -66,6 +83,7 @@ function AddForm(props) {
 					<Form.Control
 						type='text'
 						name={formName3}
+						value={value3}
 						placeholder={placeholder3}
 						onChange={props.handleChange}
 					/>
@@ -76,6 +94,7 @@ function AddForm(props) {
 					<Form.Control
 						type='text'
 						name={formName4}
+						value={value4}
 						placeholder={placeholder4}
 						onChange={props.handleChange}
 					/>
@@ -87,6 +106,7 @@ function AddForm(props) {
 				<Form.Control
 					type='text'
 					name={formName5}
+					value={value5}
 					placeholder={placeholder5}
 					onChange={props.handleChange}
 				/>
@@ -97,6 +117,7 @@ function AddForm(props) {
 				<Form.Control
 					type='text'
 					name={formName6}
+					value={value6}
 					as='textarea'
 					rows={3}
 					placeholder={placeholder6}
@@ -115,5 +136,10 @@ function AddForm(props) {
 		</Form>
 	);
 }
+
+// Set default props
+AddForm.defaultProps = {
+	editData: ''
+};
 
 export default AddForm;
