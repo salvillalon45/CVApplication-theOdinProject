@@ -10,20 +10,34 @@
 // Imports
 
 // React
-import { React, Fragment } from 'react';
+import { React, useState } from 'react';
 
 // Bootstrap
 import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 
 // Resume Components
 import ResumeHeader from './ResumeHeader';
 import ResumeSection from './ResumeSection';
-// import Education from './Education';
+
+// Reusable
+import ActionButton from './reusable/ActionButton';
 // -----------------------------------------------
 
 function Resume() {
+	const [mode, setMode] = useState(false);
+
+	function handleModeChange() {
+		setMode(!mode);
+	}
+
+	function determineMode() {
+		if (mode === false) {
+			return 'Edit';
+		}
+
+		return 'Preview';
+	}
+
 	// Work Experience Data
 	// -----------------------------------------------
 	const workExperienceH2 = 'Work Experience';
@@ -88,11 +102,19 @@ function Resume() {
 		<main>
 			<section>
 				<Container>
+					{/* Preview or Edit Mode */}
+					<ActionButton
+						text={determineMode() + ' Mode'}
+						type=''
+						onClickFunction={handleModeChange}
+					/>
+
 					{/* Resume Header */}
 					<ResumeHeader />
 
 					{/* Work Experience */}
 					<ResumeSection
+						determineMode={determineMode()}
 						buttonText={'Add Work Experience'}
 						h2Heading={workExperienceH2}
 						stateKeys={workExperienceStateKeys}
@@ -102,6 +124,7 @@ function Resume() {
 
 					{/* Education */}
 					<ResumeSection
+						determineMode={determineMode()}
 						buttonText={'Add Education'}
 						h2Heading={educationH2}
 						stateKeys={educationH2StateKeys}
@@ -111,6 +134,7 @@ function Resume() {
 
 					{/* Skills */}
 					<ResumeSection
+						determineMode={determineMode()}
 						buttonText={'Add Skill'}
 						h2Heading={skillsH2}
 						stateKeys={skillsStateKeys}

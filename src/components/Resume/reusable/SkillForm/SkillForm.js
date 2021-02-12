@@ -14,17 +14,21 @@ import { React } from 'react';
 
 // Bootstrap
 import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
 
 // Reusable
 import ActionButton from '../ActionButton';
 // -----------------------------------------------
 
 function SkillForm(props) {
-	const { formLabels } = props;
+	const { formLabels, editData } = props;
 
 	let formName1 = formLabels.get(1)[0];
 	let placeholder1 = formLabels.get(1)[1];
+	let value1;
+
+	if (editData !== '') {
+		value1 = editData[formName1];
+	}
 
 	return (
 		<Form onSubmit={(event) => props.handleSubmit(event)}>
@@ -33,6 +37,7 @@ function SkillForm(props) {
 				<Form.Control
 					type='text'
 					name={formName1}
+					value={value1}
 					placeholder={placeholder1}
 					onChange={props.handleChange}
 				/>
@@ -49,5 +54,10 @@ function SkillForm(props) {
 		</Form>
 	);
 }
+
+// Set default props
+SkillForm.defaultProps = {
+	editData: ''
+};
 
 export default SkillForm;

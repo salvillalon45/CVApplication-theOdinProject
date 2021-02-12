@@ -10,12 +10,14 @@
 // Imports
 
 // React
-import { React, Fragment } from 'react';
+import { React } from 'react';
 
 // Bootstrap
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+// Reusable
+import EditField from '../reusable/EditField';
 // -----------------------------------------------
 
 function ResumeHeader() {
@@ -24,18 +26,18 @@ function ResumeHeader() {
 			<Col>
 				<div className='resumeHeaderContainer'>
 					<div className='nameContainer'>
-						<h1>First Name</h1>
-						<h1>Last Name</h1>
+						<EditField value='First Name' tag='h1' />
+						<EditField value='Last Name' tag='h1' />
 					</div>
 
 					<div className='contactContainer'>
-						<p>Email</p>
+						<EditField value='Email' tag='p' />
 						<p>|</p>
-						<p>(760) 335 - 9012</p>
+						<EditField value='Phone' tag='p' />
 						<p>|</p>
-						<p>URL</p>
+						<EditField value='url' tag='p' />
 						<p>|</p>
-						<p>URL</p>
+						<EditField value='url' tag='p' />
 					</div>
 				</div>
 			</Col>

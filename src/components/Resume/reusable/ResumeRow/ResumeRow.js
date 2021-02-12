@@ -73,33 +73,42 @@ function ResumeRow(props) {
 	console.log(editData[formLabels.get(1)[0]]);
 	console.log(formLabels);
 	console.log({ data1, data2, data3, data4, data5, data6 });
+
+	data1 = editData[formLabels.get(1)[0]];
+	data2 = editData[formLabels.get(2)[0]];
+	data3 = editData[formLabels.get(3)[0]];
+	data4 = editData[formLabels.get(4)[0]];
+	data5 = editData[formLabels.get(5)[0]];
+	data6 = editData[formLabels.get(6)[0]];
+
 	return (
 		<div className='resumeRowContainer'>
 			<div className='row1InfoContainer'>
 				<div className='nameLocationContainer'>
-					<p>{editData[formLabels.get(1)[0]]}</p>
+					{/* <p>{editData[formLabels.get(1)[0]]}</p> */}
+					<p>{data1}</p>
 					<p>|</p>
-					{/* <p>{data2}</p> */}
-					<p>{editData[formLabels.get(2)[0]]}</p>
+					<p>{data2}</p>
+					{/* <p>{editData[formLabels.get(2)[0]]}</p> */}
 				</div>
 
 				<div className='timeFrameContainer'>
-					{/*{ <p>{data3}</p> */}
-					<p>{editData[formLabels.get(3)[0]]}</p>
-					{/* <p>{data4}</p> */}
-					<p>{editData[formLabels.get(4)[0]]}</p>
+					<p>{data3}</p>
+					{/* <p>{editData[formLabels.get(3)[0]]}</p> */}
+					<p>{data4}</p>
+					{/* <p>{editData[formLabels.get(4)[0]]}</p> */}
 				</div>
 			</div>
 
 			<div className='row2InfoContainer'>
 				<div className='titleContainer'>
-					{/* <p>{data5}</p> */}
-					<p>{editData[formLabels.get(5)[0]]}</p>
+					<p>{data5}</p>
+					{/* <p>{editData[formLabels.get(5)[0]]}</p> */}
 				</div>
 
 				<div className='descriptionContainer'>
-					{/* <p>{data6}</p> */}
-					<p>{editData[formLabels.get(6)[0]]}</p>
+					<p>{data6}</p>
+					{/* <p>{editData[formLabels.get(6)[0]]}</p> */}
 				</div>
 			</div>
 

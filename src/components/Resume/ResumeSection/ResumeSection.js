@@ -30,7 +30,8 @@ function ResumeSection(props) {
 		formLabels,
 		h2Heading,
 		buttonText,
-		resumeSectionType
+		resumeSectionType,
+		determineMode
 	} = props;
 	const [resumeData, setResumeData] = useState(stateKeys);
 	const [formFlag, setFormFlag] = useState(false);
@@ -61,7 +62,13 @@ function ResumeSection(props) {
 	}
 
 	function generateSkillsRow() {
-		const newSkillRow = <ResumeSkill data={resumeData} />;
+		const newSkillRow = (
+			<ResumeSkill
+				data={resumeData}
+				stateKeys={stateKeys}
+				formLabels={formLabels}
+			/>
+		);
 		setSkillRows([...skillRows, newSkillRow]);
 		handleFormState();
 	}
@@ -141,7 +148,7 @@ function ResumeSection(props) {
 				)} */}
 				{showForm()}
 
-				{!formFlag && (
+				{!formFlag && determineMode === 'Edit' && (
 					<ActionButton
 						text={buttonText}
 						type=''
