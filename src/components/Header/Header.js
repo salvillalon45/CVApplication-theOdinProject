@@ -17,13 +17,17 @@ import Navbar from 'react-bootstrap/NavBar';
 
 function Header(props) {
 	return (
-		<Navbar>
-			<Navbar.Brand href='#home'>
+		<Navbar className='purpleBackground'>
+			<Navbar.Brand className='openSansText boldText'>
 				The Odin Project: CV Builder
 			</Navbar.Brand>
+
 			<Navbar.Toggle />
+
 			<Navbar.Collapse className='justify-content-end'>
-				<Navbar.Text>Build Your Resume and Export to PDF</Navbar.Text>
+				<Navbar.Text className='lightGreyText openSansText'>
+					Build Your Resume and Export to PDF
+				</Navbar.Text>
 			</Navbar.Collapse>
 		</Navbar>
 	);

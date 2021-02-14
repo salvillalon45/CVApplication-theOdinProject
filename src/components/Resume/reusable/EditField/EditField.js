@@ -68,8 +68,7 @@ function EditField(props) {
 		}
 	}
 
-	// console.table(props);
-	// console.table(editState);
+	console.log(props.id);
 
 	return (
 		<>
@@ -86,10 +85,16 @@ function EditField(props) {
 					/>
 				</Form.Group>
 			) : (
-				<props.tag onClick={() => handleClick()}>{text}</props.tag>
+				<props.tag id={props.id} onClick={() => handleClick()}>
+					{text}
+				</props.tag>
 			)}
 		</>
 	);
 }
+
+EditField.defaultProps = {
+	id: ''
+};
 
 export default EditField;

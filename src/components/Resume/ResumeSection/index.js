@@ -1,3 +1,3 @@
-import ResumeSection from './ResumeSection';
+import { ResumeSection, ThemeContext } from './ResumeSection';
 
-export default ResumeSection;
+export { ResumeSection, ThemeContext };

@@ -4,9 +4,16 @@
 /* 
 /* ----------------------------------------------- */
 
-/* Bootstrap and Fonts */
+/* Fonts */
 /* ----------------------------------------------- */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro&display=swap');
+
+// Color Variables
+// -----------------------------------------------
+$purple: #5d4d9d;
+$grey: #c2ccd2;
+$lightGrey: #edeef6;
+$black: #2f2d2c;
 
 /* Components */
 /* ----------------------------------------------- */
@@ -18,9 +25,8 @@ body,
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #14286c;
 	height: 100%;
-	font-family: 'Roboto Condensed', sans-serif;
+	background-color: $grey;
 }
 
 #root,
@@ -32,16 +38,42 @@ body {
 main {
 	flex: 1 0 auto;
 	margin: 0 auto;
+	margin-top: 50px;
+	background-color: $lightGrey;
+	padding: 55px;
+	border-radius: 15px;
 }
 
-/* Text Colors */
+/* Text Styling and Colors */
 /* ----------------------------------------------- */
 .whiteText {
-	color: #f0edff;
+	color: $lightGrey;
+}
+
+.blackText {
+	color: $black;
 }
 
 .redText {
 	color: red;
+}
+
+.boldText {
+	font-weight: bold;
+}
+
+// Text Sizes
+// -----------------------------------------------
+.purpleBackground {
+	background-color: $purple;
+}
+
+.greyBackground {
+	background-color: $grey;
+}
+
+.lightGreyBackground {
+	background-color: $lightGrey;
 }
 
 /* Text Sizes */
@@ -56,39 +88,49 @@ main {
 
 /* Text Fonts */
 /* ----------------------------------------------- */
-.robotoText {
-	font-family: 'Roboto Condensed', sans-serif;
+.openSansText {
+	font-family: 'Open Sans', sans-serif;
 }
 
-.antonText {
-	font-family: 'Anton', sans-serif;
+.sourceText {
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Buttons */
 /* ----------------------------------------------- */
-/* .buttonContainer {
-	margin-top: 50px;
+.buttonContainer {
+	button {
+		font-family: 'Source Sans Pro';
+	}
 }
 
-button {
-	width: 70%;
-	height: 58px;
-} */
-
-/* .btn-primary.disabled,
+.btn-primary.disabled,
 .btn-primary:disabled,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:focus,
 .btn-primary {
-	background-color: #7f7baf;
-	border-color: #7f7baf;
-	box-shadow: 0 0 0 0.2rem #7f7baf;
+	background-color: $purple;
+	border-color: $purple;
 }
 
 .btn-primary:hover {
 	background-color: #47418e;
-	border-color: #47418e;
-	box-shadow: 0 0 0 0.2rem #47418e;
-} */
+	border-color: $purple;
+}
+
+/* Forms */
+/* ----------------------------------------------- */
+.form-control:focus {
+	color: $black;
+	background-color: #fff;
+	border-color: $purple;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem #5d4d9d;
+}
+
+.formButtonContainers {
+	display: flex;
+	justify-content: space-evenly;
+}

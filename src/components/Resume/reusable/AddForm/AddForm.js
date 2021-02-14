@@ -29,18 +29,18 @@ function AddForm(props) {
 	let value5;
 	let value6;
 
-	let formName1 = formLabels.get(1)[0];
-	let placeholder1 = formLabels.get(1)[1];
-	let formName2 = formLabels.get(2)[0];
-	let placeholder2 = formLabels.get(2)[1];
-	let formName3 = formLabels.get(3)[0];
-	let placeholder3 = formLabels.get(3)[1];
-	let formName4 = formLabels.get(4)[0];
-	let placeholder4 = formLabels.get(4)[1];
-	let formName5 = formLabels.get(5)[0];
-	let placeholder5 = formLabels.get(5)[1];
-	let formName6 = formLabels.get(6)[0];
-	let placeholder6 = formLabels.get(6)[1];
+	const formName1 = formLabels.get(1)[0];
+	const placeholder1 = formLabels.get(1)[1];
+	const formName2 = formLabels.get(2)[0];
+	const placeholder2 = formLabels.get(2)[1];
+	const formName3 = formLabels.get(3)[0];
+	const placeholder3 = formLabels.get(3)[1];
+	const formName4 = formLabels.get(4)[0];
+	const placeholder4 = formLabels.get(4)[1];
+	const formName5 = formLabels.get(5)[0];
+	const placeholder5 = formLabels.get(5)[1];
+	const formName6 = formLabels.get(6)[0];
+	const placeholder6 = formLabels.get(6)[1];
 
 	if (editData !== '') {
 		value1 = editData[formName1];
@@ -51,10 +51,11 @@ function AddForm(props) {
 		value6 = editData[formName6];
 	}
 
-	console.log(editData);
-
 	return (
-		<Form onSubmit={(event) => props.handleSubmit(event)}>
+		<Form
+			className='addFormContainer'
+			onSubmit={(event) => props.handleSubmit(event)}
+		>
 			<Form.Group controlId='formName1'>
 				<Form.Label htmlFor={formName1}>{formName1}</Form.Label>
 				<Form.Control
@@ -125,14 +126,16 @@ function AddForm(props) {
 				/>
 			</Form.Group>
 
-			<ActionButton
-				variant='danger'
-				text='Cancel'
-				type='reset'
-				onClickFunction={props.handleCancel}
-			/>
+			<div className='formButtonContainers'>
+				<ActionButton
+					variant='danger'
+					text='Cancel'
+					type='reset'
+					onClickFunction={props.handleCancel}
+				/>
 
-			<ActionButton variant='primary' text='Submit' type='submit' />
+				<ActionButton variant='primary' text='Submit' type='submit' />
+			</div>
 		</Form>
 	);
 }

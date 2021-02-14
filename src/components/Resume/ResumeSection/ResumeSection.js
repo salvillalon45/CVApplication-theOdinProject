@@ -10,7 +10,7 @@
 // Imports
 
 // React
-import { React, useState } from 'react';
+import { React, useState, createContext } from 'react';
 
 // Bootstrap
 import Row from 'react-bootstrap/Row';
@@ -24,7 +24,7 @@ import SkillForm from '../reusable/SkillForm';
 import ResumeSkill from '../reusable/ResumeSkill';
 // -----------------------------------------------
 
-function ResumeSection(props) {
+export function ResumeSection(props) {
 	const {
 		stateKeys,
 		formLabels,
@@ -45,7 +45,7 @@ function ResumeSection(props) {
 	function handleChange(event) {
 		const name = event.target.name;
 		const value = event.target.value;
-		console.log({ name, value });
+
 		setResumeData({
 			...resumeData,
 			[name]: value
@@ -54,6 +54,7 @@ function ResumeSection(props) {
 
 	function onSubmit(event) {
 		event.preventDefault();
+
 		if (resumeSectionType === '1') {
 			generateResumeRow();
 		} else {
@@ -67,8 +68,10 @@ function ResumeSection(props) {
 				data={resumeData}
 				stateKeys={stateKeys}
 				formLabels={formLabels}
+				determineMode={determineMode}
 			/>
 		);
+
 		setSkillRows([...skillRows, newSkillRow]);
 		handleFormState();
 	}
@@ -85,8 +88,10 @@ function ResumeSection(props) {
 				data={resumeData}
 				stateKeys={stateKeys}
 				formLabels={formLabels}
+				determineMode={determineMode}
 			/>
 		);
+
 		setResumeRows([...resumeRows, newResumeRow]);
 		handleFormState();
 	}
@@ -131,33 +136,34 @@ function ResumeSection(props) {
 		}
 	}
 
+	console.log('INside resumeSection');
+	console.log({ determineMode });
+
 	return (
-		<Row>
-			<Col>
-				<h2>{h2Heading}</h2>
+		<ThemeContext.Provider value={determineMode}>
+			<Row className='resumeSectionContainer'>
+				<Col>
+					<h2>{h2Heading}</h2>
 
-				{showResumeData()}
+					{showResumeData()}
 
-				{/* {formFlag && (
-					<AddForm
-						handleChange={handleChange}
-						formLabels={formLabels}
-						handleCancel={handleFormState}
-						handleSubmit={onSubmit}
-					/>
-				)} */}
-				{showForm()}
+					{showForm()}
 
-				{!formFlag && determineMode === 'Edit' && (
-					<ActionButton
-						text={buttonText}
-						type=''
-						onClickFunction={handleFormState}
-					/>
-				)}
-			</Col>
-		</Row>
+					{!formFlag && determineMode === 'Edit' && (
+						<ActionButton
+							text={buttonText}
+							type=''
+							onClickFunction={handleFormState}
+						/>
+					)}
+				</Col>
+			</Row>
+		</ThemeContext.Provider>
 	);
 }
 
-export default ResumeSection;
+const defaultContext = {
+	determineMode: 'Edit'
+};
+
+export const ThemeContext = createContext(defaultContext);

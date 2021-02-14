@@ -17,7 +17,7 @@ import Container from 'react-bootstrap/Container';
 
 // Resume Components
 import ResumeHeader from './ResumeHeader';
-import ResumeSection from './ResumeSection';
+import { ResumeSection } from './ResumeSection';
 
 // Reusable
 import ActionButton from './reusable/ActionButton';
@@ -28,14 +28,15 @@ function Resume() {
 
 	function handleModeChange() {
 		setMode(!mode);
+		determineMode();
 	}
 
 	function determineMode() {
 		if (mode === false) {
 			return 'Edit';
+		} else {
+			return 'Preview';
 		}
-
-		return 'Preview';
 	}
 
 	// Work Experience Data
@@ -103,11 +104,13 @@ function Resume() {
 			<section>
 				<Container>
 					{/* Preview or Edit Mode */}
-					<ActionButton
-						text={determineMode() + ' Mode'}
-						type=''
-						onClickFunction={handleModeChange}
-					/>
+					<div id='modeButton'>
+						<ActionButton
+							text={determineMode() + ' Mode'}
+							type=''
+							onClickFunction={handleModeChange}
+						/>
+					</div>
 
 					{/* Resume Header */}
 					<ResumeHeader />

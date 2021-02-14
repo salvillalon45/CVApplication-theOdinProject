@@ -4,9 +4,29 @@
 /* 
 /* ----------------------------------------------- */
 
-// Reusable Components
-@import './reusable/ResumeRow/ResumeRow.scss';
-
 // Resume Components
 @import './ResumeHeader/ResumeHeader.scss';
 @import './ResumeSection/ResumeSection.scss';
+
+// Reusable Components
+@import './reusable/EditField/EditField.scss';
+@import './reusable/AddForm/AddForm.scss';
+@import './reusable/ResumeRow/ResumeRow.scss';
+@import './reusable/ResumeSkill/ResumeSkill.scss';
+
+main {
+	#modeButton {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 25px;
+	}
+
+	p,
+	h1,
+	h2,
+	label {
+		color: $black;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: bolder;
+	}
+}

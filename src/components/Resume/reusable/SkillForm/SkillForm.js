@@ -22,8 +22,8 @@ import ActionButton from '../ActionButton';
 function SkillForm(props) {
 	const { formLabels, editData } = props;
 
-	let formName1 = formLabels.get(1)[0];
-	let placeholder1 = formLabels.get(1)[1];
+	const formName1 = formLabels.get(1)[0];
+	const placeholder1 = formLabels.get(1)[1];
 	let value1;
 
 	if (editData !== '') {
@@ -43,14 +43,16 @@ function SkillForm(props) {
 				/>
 			</Form.Group>
 
-			<ActionButton
-				variant='danger'
-				text='Cancel'
-				type='reset'
-				onClickFunction={props.handleCancel}
-			/>
+			<div className='formButtonContainers'>
+				<ActionButton
+					variant='danger'
+					text='Cancel'
+					type='reset'
+					onClickFunction={props.handleCancel}
+				/>
 
-			<ActionButton variant='primary' text='Submit' type='submit' />
+				<ActionButton variant='primary' text='Submit' type='submit' />
+			</div>
 		</Form>
 	);
 }

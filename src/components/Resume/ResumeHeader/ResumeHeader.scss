@@ -12,5 +12,25 @@
 
 	.contactContainer {
 		justify-content: space-between;
+
+		p {
+			padding-right: 10px;
+		}
+
+		.column2,
+		.column1 {
+			text-align: center;
+		}
+		.column2 {
+			padding-left: 50px;
+		}
+	}
+
+	.nameContainer {
+		justify-content: center;
+
+		#rightText {
+			margin-left: 20px;
+		}
 	}
 }

@@ -5,9 +5,27 @@
 /* ----------------------------------------------- */
 
 .resumeRowContainer {
+	padding-bottom: 20px;
+
 	.row1InfoContainer,
 	.nameLocationContainer,
 	.timeFrameContainer {
 		display: flex;
+	}
+
+	.row1InfoContainer {
+		justify-content: space-between;
+
+		.divider {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+	}
+
+	.row1InfoContainer,
+	.row2InfoContainer .descriptionContainer {
+		p {
+			font-weight: 500;
+		}
 	}
 }
