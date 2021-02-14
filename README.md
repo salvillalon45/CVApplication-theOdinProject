@@ -9,15 +9,16 @@
     -   Be intentional about how I structured this project so I first wrote my ideas and how I wanted to structure the project.
     -   In using semantic tags since I wanted to start creating good accessibility habits
     -   I realized how important a preprocessor is so I used Sass
-    -
 
 # Lessons Learned
+
+1. How to use the onBlur method to make input update when you click outside of the input field
 
 1. Learned how to use the CSS Preprocessor SASS
 
     1. Very similar to Less. So I am going to start using both
 
-2. Used Dribbel to get inspiration for the fonts and design of the web app. [Inspiration from Switch](https://dribbble.com/shots/14730009-Switch/attachments/6431406?mode=media). This lead me to creating a style guide.
+1. Used Dribbel to get inspiration for the fonts and design of the web app. [Inspiration from Switch](https://dribbble.com/shots/14730009-Switch/attachments/6431406?mode=media). This lead me to creating a style guide.
 
     - ## 📗 Fonts used
 
@@ -33,9 +34,9 @@
         | Light Grey | ![#edeef6](https://via.placeholder.com/10/edeef6?text=+) `#edeef6` |
         | Black      | ![#2f2d2c](https://via.placeholder.com/10/2f2d2c?text=+) `#2f2d2c` |
 
-3. We also practice a lot with using reusable components. I learned how to use new Map(). **The Map object holds key-value pairs and remembers the original insertion order of the keys. THis was really good as it allowed me to create the component for Form reusable**
+1. We also practice a lot with using reusable components. I learned how to use new Map(). **The Map object holds key-value pairs and remembers the original insertion order of the keys. THis was really good as it allowed me to create the component for Form reusable**
 
-4. Learned how to use useContext! A big challenge I encountered was that my display components was not getting the most updated props because the componeont was not getting rerendered again. The component was just used to display data and everytime the user added a new work experience, education or skill it will generate a new ResumeRow or ResumeSkill component. This component had no way of getting the most updated props since it was only used for display.
+1. Learned how to use useContext! A big challenge I encountered was that my display components was not getting the most updated props because the componeont was not getting rerendered again. The component was just used to display data and everytime the user added a new work experience, education or skill it will generate a new ResumeRow or ResumeSkill component. This component had no way of getting the most updated props since it was only used for display.
     1. I learned how useful useContext is since it was solution for my problem!
     2. Resource [https://medium.com/@guptagaruda/react-hooks-understanding-component-re-renders-9708ddee9928#3e84](https://medium.com/@guptagaruda/react-hooks-understanding-component-re-renders-9708ddee9928#3e84)
 

@@ -32,7 +32,7 @@ function ResumeRow(props) {
 	function handleChange(event) {
 		const name = event.target.name;
 		const value = event.target.value;
-		console.log({ name, value });
+
 		setEditData({
 			...editData,
 			[name]: value
