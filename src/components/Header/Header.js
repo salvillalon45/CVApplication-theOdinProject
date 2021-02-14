@@ -26,7 +26,7 @@ function Header(props) {
 
 			<Navbar.Collapse className='justify-content-end'>
 				<Navbar.Text className='lightGreyText openSansText'>
-					Build Your Resume and Export to PDF
+					Build Your Resume!
 				</Navbar.Text>
 			</Navbar.Collapse>
 		</Navbar>

@@ -24,7 +24,6 @@ import Resume from './components/Resume';
 function App() {
 	return (
 		<>
-			{/* HEAER */}
 			<Header />
 
 			<Resume />
