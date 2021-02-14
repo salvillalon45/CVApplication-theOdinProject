@@ -24,8 +24,6 @@ function EditField(props) {
 	const { text, isEditing, defaultText } = editState;
 
 	function handleClick() {
-		console.log('Inside handleClick');
-
 		setEditState({
 			...editState,
 			text: text,
@@ -40,7 +38,6 @@ function EditField(props) {
 	function handleChange(event) {
 		const name = event.target.name;
 		const value = event.target.value;
-		console.log({ name, value });
 
 		setEditState({
 			...editState,
@@ -67,8 +64,6 @@ function EditField(props) {
 			});
 		}
 	}
-
-	console.log(props.id);
 
 	return (
 		<>

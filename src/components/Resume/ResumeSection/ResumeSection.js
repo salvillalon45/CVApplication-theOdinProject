@@ -136,9 +136,6 @@ export function ResumeSection(props) {
 		}
 	}
 
-	console.log('INside resumeSection');
-	console.log({ determineMode });
-
 	return (
 		<ThemeContext.Provider value={determineMode}>
 			<Row className='resumeSectionContainer'>

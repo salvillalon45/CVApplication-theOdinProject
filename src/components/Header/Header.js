@@ -15,7 +15,7 @@ import { React } from 'react';
 import Navbar from 'react-bootstrap/NavBar';
 // -----------------------------------------------
 
-function Header(props) {
+function Header() {
 	return (
 		<Navbar className='purpleBackground'>
 			<Navbar.Brand className='openSansText boldText'>

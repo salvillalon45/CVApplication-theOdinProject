@@ -19,7 +19,7 @@ import Button from 'react-bootstrap/Button';
 function ActionButton(props) {
 	const { text, type, variant } = props;
 
-	function test() {
+	function determineButton() {
 		if (type === 'submit') {
 			return (
 				<Button variant={variant} type={type}>
@@ -39,18 +39,7 @@ function ActionButton(props) {
 		}
 	}
 
-	return (
-		<div className='buttonContainer'>
-			{/* <Button
-				variant={variant}
-				type={type}
-				onClick={() => props.onClickFunction()}
-			>
-				{text}
-			</Button> */}
-			{test()}
-		</div>
-	);
+	return <div className='buttonContainer'>{determineButton()}</div>;
 }
 
 export default ActionButton;
