@@ -40,7 +40,7 @@
     1. I learned how useful useContext is since it was solution for my problem!
     2. Resource [https://medium.com/@guptagaruda/react-hooks-understanding-component-re-renders-9708ddee9928#3e84](https://medium.com/@guptagaruda/react-hooks-understanding-component-re-renders-9708ddee9928#3e84)
 
-You can find more on the project here: [The Odin Project - CV Application](https://www.theodinproject.com/courses/javascript/lessons/cv-application)
+You can find more on the project here: [The Odin Project - CV Application](https://www.theodinproject.com/lessons/node-path-javascript-cv-application)
 
 5. Learnd the following terms!
 
