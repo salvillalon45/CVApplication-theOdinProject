@@ -29,10 +29,10 @@
 
         | Color      | Hex                                                                |
         | ---------- | ------------------------------------------------------------------ |
-        | Purple     | ![#5d4d9d](https://via.placeholder.com/10/5d4d9d?text=+) `#5d4d9d` |
-        | Grey       | ![#c2ccd2](https://via.placeholder.com/10/c2ccd2?text=+) `#c2ccd2` |
-        | Light Grey | ![#edeef6](https://via.placeholder.com/10/edeef6?text=+) `#edeef6` |
-        | Black      | ![#2f2d2c](https://via.placeholder.com/10/2f2d2c?text=+) `#2f2d2c` |
+        | Purple     | ![#5d4d9d](https://placehold.co/15x15/5d4d9d/5d4d9d.png) `#5d4d9d` |
+        | Grey       | ![#c2ccd2](https://placehold.co/15x15/c2ccd2/c2ccd2.png) `#c2ccd2` |
+        | Light Grey | ![#edeef6](https://placehold.co/15x15/edeef6/edeef6.png) `#edeef6` |
+        | Black      | ![#2f2d2c](https://placehold.co/15x15/2f2d2c/2f2d2c.png) `#2f2d2c` |
 
 1. We also practice a lot with using reusable components. I learned how to use new Map(). **The Map object holds key-value pairs and remembers the original insertion order of the keys. THis was really good as it allowed me to create the component for Form reusable**
 
