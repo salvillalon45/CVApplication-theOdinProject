@@ -9,6 +9,8 @@
     -   Be intentional about how I structured this project so I first wrote my ideas and how I wanted to structure the project.
     -   In using semantic tags since I wanted to start creating good accessibility habits
     -   I realized how important a preprocessor is so I used Sass
+- Project Task: [The Odin Project - CV Application](https://www.theodinproject.com/lessons/node-path-javascript-cv-application)
+- View Project: http://theodinproject_cv.surge.sh/
 
 ### Implementation 
 - Used React, React Bootstrap, and Sass to complete the project. Used Surge.sh to deploy
