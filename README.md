@@ -1,14 +1,21 @@
-# theOdinProject-CVApplication
+# CV Application
 
-[TheOdinProject: Javascript] - Project: CVApplication
+[The Odin Project: Javascript] - Project: CV Application
 
 # Summary
-
+- Created a CV builder using React. Allows users to add education, skills, experience, and contact info. User can edit their previously submitted data
 -   This project was used as an introduction to React. Since I had some exposure to React, I pI really pushed myself:
     -   To practice creating Reusable components.
     -   Be intentional about how I structured this project so I first wrote my ideas and how I wanted to structure the project.
     -   In using semantic tags since I wanted to start creating good accessibility habits
     -   I realized how important a preprocessor is so I used Sass
+
+### Implementation 
+- Used React, React Bootstrap, and Sass to complete the project. Used Surge.sh to deploy
+- Learned what Lexical Scope is and how it is used in react. We can use arrow functions to not lose access to calling functions
+
+### Demo
+<img alt="CV Application Demo" src="./cv_builder.gif" width="600" />
 
 # Lessons Learned
 
